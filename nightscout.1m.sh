@@ -5,7 +5,7 @@
 # <bitbar.desc>Display current Nightscout Blood Sugar and Trend</bitbar.desc>
 # <bitbar.dependencies>bash, curl, bc</bitbar.dependencies>
 # <bitbar.author.github>badgerpapa</bitbar.author.github>
-# <bitbar.image>http://www.hosted-somewhere/pluginimage</bitbar.image>
+# <bitbar.image>https://raw.githubusercontent.com/badgerpapa/NightscoutBitBar/master/Preview.png</bitbar.image>
 # <bitbar.abouturl>https://github.com/badgerpapa/NightscoutBitBar/blob/master/README.md</bitbar.abouturl>
 
 NSURL=http://YOURNIGHTSCOUTURL.herokuapp.com

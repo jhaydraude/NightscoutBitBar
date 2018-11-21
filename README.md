@@ -5,3 +5,6 @@ This is a plugin for BitBar (https://getbitbar.com/) which will read your Nights
 
 Usage: 
 Edit the file nightscout.1m.sh to include your personal Nightscout URL and your units preferences.
+
+ToDo:
+Add alert thresholds and alter the output (colour?) when thresholds are crossed.
