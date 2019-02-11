@@ -13,7 +13,7 @@ USEMMOL=true # true if you use mmol/l units. false if you use mg/dl
 
 read -r -a RESULTARRAY <<< "$(curl --silent $NSURL/api/v1/entries/current)"
 
-TIMESTAMP=${RESULTARRAY[0]}  
+TIMESTAMP=${RESULTARRAY[0]//\"}  
 TIMESTAMP=${TIMESTAMP//\.[0-9][0-9][0-9]/} #Strip milliseconds from the timestamp. BSD date doesn't like it.
 EPOCHTS=$(date -j -f "%FT%T%z" "$TIMESTAMP" +%s) # Convert timestamp to epoch time
 EPOCHNOW=$(date +%s) # Convert current time to epoch time
@@ -25,27 +25,27 @@ if $USEMMOL ; then
 fi
 
 
-case ${RESULTARRAY[3]} in
+case ${RESULTARRAY[3]//\"} in
 	FortyFiveUp)
-		TREND='/'
+		TREND='↗'
 		;;
 	FortyFiveDown)
-		TREND='\'
+		TREND='↘'
 		;;
 	SingleUp)
-		TREND='/\'
+		TREND='↑'
 		;;
 	SingleDown)
-		TREND='\/'
+		TREND='↓'
 		;;
 	Flat)
-		TREND='->'
+		TREND='→'
 		;;
 	DoubleUp)
-		TREND='//\\'
+		TREND='⇈'
 		;;
 	DoubleDown)
-		TREND='\\//'
+		TREND='⇊'
 		;;
 	*)
 		TREND=${RESULTARRAY[3]}
