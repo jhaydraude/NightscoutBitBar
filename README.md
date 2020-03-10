@@ -8,7 +8,7 @@ Installation:
 Download and install BitBar from above link.
 Open URL:
 
-bitbar://openPlugin?title=Nightscout%20Reader&src=https://raw.githubusercontent.com/badgerpapa/NightscoutBitBar/master/nightscout.1m.sh
+bitbar://openPlugin?title=Nightscout%20Reader&src=https://raw.githubusercontent.com/jhaydraude/NightscoutBitBar/master/nightscout.1m.sh
 
 
 Usage: 
